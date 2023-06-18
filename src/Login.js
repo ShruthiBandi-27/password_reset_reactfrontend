@@ -15,7 +15,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { API } from "./global";
 
-export default function Login() {
+export default function Login({setUser}) {
   const nav = useNavigate();
   //const API = process.env.API;
   const [formData, setFormData] = useState({
@@ -47,7 +47,10 @@ export default function Login() {
             onClose: () => {
               console.log("closed");
               setTimeout(function () {
-                nav("/welcome");
+                //nav("/welcome", {token: res.token});
+                setUser(formData.email)
+                 nav(`/welcome/${res.token}`);
+                // nav(`/welcome?token=${res.token}`);
               }, 1000);
             },
           });
@@ -71,10 +74,11 @@ export default function Login() {
     <Container
       className="mt-8"
       style={{
-        border: "1px solid black",
-        marginTop: "50px",
-        width: "60%",
+        // border: "1px solid black",
+        marginTop: "120px",
+        width: "50%",
         padding: "20px",
+        backgroundColor: "white"
       }}
     >
       <ToastContainer />
@@ -111,7 +115,7 @@ export default function Login() {
           </Col>
         </Row>
         <Row>
-          <Col md={6}></Col>
+          <Col md={5}></Col>
           <Col md={2}></Col>
           <Col md={4}>
             <a href="/forgotpass">Forgot password?</a>
@@ -122,7 +126,7 @@ export default function Login() {
           <Col md={2}></Col>
           <Col md={8}>
             <FormGroup>
-              <Button color="primary" block onClick={handleSubmit}>
+              <Button style={{backgroundColor:"orange"}} block onClick={handleSubmit}>
                 Login
               </Button>
             </FormGroup>

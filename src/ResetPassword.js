@@ -65,7 +65,16 @@ export default function ResetPassword() {
   };
 
   return (
-    <Container className="mt-8">
+    <Container
+     className="mt-8"
+     style={{
+        // border: "1px solid black",
+        marginTop: "120px",
+        width: "50%",
+        padding: "20px",
+        backgroundColor: "white"
+      }}
+     >
       <ToastContainer autoClose={2000} />
       <h3 className="text-center">Reset Password</h3>
       <Form>
@@ -89,7 +98,7 @@ export default function ResetPassword() {
           <Col md={2}></Col>
           <Col md={8}>
             <FormGroup>
-              <Button color="primary" block onClick={handleSubmit}>
+              <Button  style={{backgroundColor:"orange"}} block onClick={handleSubmit}>
                 Reset
               </Button>
             </FormGroup>

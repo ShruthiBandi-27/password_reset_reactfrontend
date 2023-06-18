@@ -1,5 +1,6 @@
 .navbar {
-    background-color: #4e72df;
+    /* background-color: #4e72df; */
+    background-color: black;
     color: white;
   }
   
@@ -10,11 +11,24 @@
     margin: 2px 2px;
     padding: 5px;
     font-weight: bold;
-    background-color: #4e72df;
+    /* background-color: #4e72df; */
+    background-color: black;
   }
   
   .link-text {
     color: white;
     padding: 2rem;
+    cursor: pointer;
+  }
+
+  .navbar-heading {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+
+  .navbar-heading span {
+    color: var(--primary-color)
   }
  

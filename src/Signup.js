@@ -65,10 +65,11 @@ export default function Signup() {
     <Container
       className="mt-8"
       style={{
-        border: "1px solid black",
-        marginTop: "50px",
-        width: "60%",
+        // border: "1px solid black",
+        marginTop: "120px",
+        width: "50%",
         padding: "20px",
+        backgroundColor: "white"
       }}
     >
       <ToastContainer autoClose={2000} />
@@ -105,7 +106,7 @@ export default function Signup() {
           </Col>
         </Row>
         <Row>
-          <Col md={4}></Col>
+          <Col md={3}></Col>
           <Col md={3}></Col>
           <Col md={4}>
             <a href="/login">Already a user? Please Login</a>
@@ -116,7 +117,7 @@ export default function Signup() {
           <Col md={2}></Col>
           <Col md={8}>
             <FormGroup>
-              <Button color="primary" block onClick={handleSubmit}>
+              <Button style={{backgroundColor:"orange"}} block onClick={handleSubmit}>
                 Signup
               </Button>
             </FormGroup>

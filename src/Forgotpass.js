@@ -58,10 +58,11 @@ export default function Forgotpass() {
     <Container
       className="mt-8"
       style={{
-        border: "1px solid black",
-        marginTop: "50px",
-        width: "60%",
+        // border: "1px solid black",
+        marginTop: "120px",
+        width: "50%",
         padding: "20px",
+        backgroundColor: "white"
       }}
     >
       <ToastContainer />
@@ -87,7 +88,7 @@ export default function Forgotpass() {
           <Col md={2}></Col>
           <Col md={8}>
             <FormGroup>
-              <Button color="primary" block onClick={handleSubmit}>
+              <Button style={{backgroundColor:"orange"}} block onClick={handleSubmit}>
                 Submit
               </Button>
             </FormGroup>
